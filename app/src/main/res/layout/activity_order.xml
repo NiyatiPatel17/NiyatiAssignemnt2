@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:backgroundTint="?android:attr/colorBackground"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSize"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size" />
+
+            <Spinner
+                android:id="@+id/spSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvBase"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Base" />
+
+            <RadioGroup
+                android:id="@+id/rgBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+
+                <RadioButton
+                    android:id="@+id/rbRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regular" />
+
+                <RadioButton
+                    android:id="@+id/rbCheeseBurst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheese Burst" />
+
+                <RadioButton
+                    android:id="@+id/rbThinCrust"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thin Crust" />
+
+                <RadioButton
+                    android:id="@+id/rbGluetenFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Glueten Free" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvNumber"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Number of Pizza" />
+
+            <EditText
+                android:id="@+id/etNumberOfPizzas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="number"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvToppings"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Toppings" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3">
+
+                <CheckBox
+                    android:id="@+id/cbPepperoni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pepperoni" />
+
+                <CheckBox
+                    android:id="@+id/cbMushroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mushroom" />
+
+                <CheckBox
+                    android:id="@+id/cbOnion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Onion" />
+
+                <CheckBox
+                    android:id="@+id/cbSausage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sausage" />
+
+                <CheckBox
+                    android:id="@+id/cbBacon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bacon" />
+
+                <CheckBox
+                    android:id="@+id/cbExtraCheese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Cheese" />
+
+                <CheckBox
+                    android:id="@+id/cbBlackOlives"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Black Olives" />
+
+                <CheckBox
+                    android:id="@+id/cbGreenPepper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Green Pepper" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tvSpice"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Spice Level" />
+
+            <RadioGroup
+                android:id="@+id/rgSpiceLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mild" />
+
+                <RadioButton
+                    android:id="@+id/rbMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/rbHot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot" />
+
+                <RadioButton
+                    android:id="@+id/rbExtraHot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Hot" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tvDressing"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Side Dressing" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <CheckBox
+                    android:id="@+id/cbGarlicDip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Garlic Dip" />
+
+                <CheckBox
+                    android:id="@+id/cbRanchDip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ranch Dip" />
+
+                <CheckBox
+                    android:id="@+id/cbBlueCheeseDip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blue Cheese Dip" />
+
+                <CheckBox
+                    android:id="@+id/cbBuffaloSauce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buffalo Sauce" />
+
+                <CheckBox
+                    android:id="@+id/cbPepsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pepsi" />
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tvDelivery"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Delivery or Pickup" />
+
+            <RadioGroup
+                android:id="@+id/rgDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery" />
+
+                <RadioButton
+                    android:id="@+id/rbPickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pickup" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:autofillHints="name"
+                    android:inputType="textPersonName" />
+
+                <LinearLayout
+                    android:id="@+id/llAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Address" />
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:autofillHints="postalAddress"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Phone" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="100dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Reset"
+
+        android:src="@drawable/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Order"
+        android:textColor="?attr/colorOnPrimary"
+        app:backgroundTint="?attr/colorPrimary"
+        app:icon="@drawable/order"
+        app:iconTint="?attr/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
